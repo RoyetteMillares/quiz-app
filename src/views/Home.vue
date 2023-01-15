@@ -2,7 +2,10 @@
 <script setup>
 import { ref, watch } from 'vue';
 import q from '../data/quiz.json'
+import Nav from '../components/Nav.vue'
 import Card from '../components/Card.vue'
+
+
 
 const quizes = ref(q);
 const search = ref("");
@@ -16,10 +19,11 @@ watch(search, () => {
 <template>
     <main>
         <div class="container">
-            <header>
+            <Nav></Nav>
+            <div class="quiz-header">
                 <h1>Quizzes</h1>
                 <input type="text" placeholder="search . . ." v-model.trim="search" />
-            </header>
+            </div>
 
             <div class="options-wp">
                 <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
@@ -31,7 +35,7 @@ watch(search, () => {
 
 
 <style scoped>
-header {
+.quiz-header {
     margin: 5rem 0;
     display: flex;
 
