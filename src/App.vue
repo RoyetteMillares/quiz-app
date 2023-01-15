@@ -1,4 +1,6 @@
 <script setup>
+import { RouterView } from 'vue-router';
+
 
 import Home from './views/Home.vue';
 </script>
@@ -6,6 +8,6 @@ import Home from './views/Home.vue';
 
 <template>
   <section>
-    <Home />
+    <RouterView />
   </section>
 </template>

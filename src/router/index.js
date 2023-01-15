@@ -5,7 +5,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 
 
-const router = ({
+const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
@@ -21,3 +21,6 @@ const router = ({
 
     ]
 })
+
+
+export default router
